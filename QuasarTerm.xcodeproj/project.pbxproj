@@ -11,6 +11,17 @@
 		655C09632B2C9A70007FF8CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C09622B2C9A70007FF8CA /* ContentView.swift */; };
 		655C09652B2C9A71007FF8CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655C09642B2C9A71007FF8CA /* Assets.xcassets */; };
 		655C09682B2C9A71007FF8CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655C09672B2C9A71007FF8CA /* Preview Assets.xcassets */; };
+		655C09712B2C9AB9007FF8CA /* LocalProcessTerminalViewPrepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C09702B2C9AB9007FF8CA /* LocalProcessTerminalViewPrepresentable.swift */; };
+		655C09792B2CA025007FF8CA /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 655C09782B2CA025007FF8CA /* SwiftTerm */; };
+		655C097B2B2CA025007FF8CA /* SwiftTermFuzz in Frameworks */ = {isa = PBXBuildFile; productRef = 655C097A2B2CA025007FF8CA /* SwiftTermFuzz */; };
+		655C097D2B2CA264007FF8CA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C097C2B2CA264007FF8CA /* SettingsView.swift */; };
+		655C09802B2CA274007FF8CA /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 655C097F2B2CA274007FF8CA /* Defaults */; };
+		655C09832B2CA288007FF8CA /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C09822B2CA288007FF8CA /* Defaults.swift */; };
+		655C09862B2CA473007FF8CA /* FontPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 655C09852B2CA473007FF8CA /* FontPicker */; };
+		655C09892B2CA4CD007FF8CA /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C09882B2CA4CD007FF8CA /* AppearanceView.swift */; };
+		655C098B2B2CAEE9007FF8CA /* ColorConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C098A2B2CAEE9007FF8CA /* ColorConvert.swift */; };
+		655C098D2B2CB443007FF8CA /* ColorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C098C2B2CB443007FF8CA /* ColorFromHex.swift */; };
+		655C098F2B2CB97D007FF8CA /* AdvancedToolbarWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655C098E2B2CB97D007FF8CA /* AdvancedToolbarWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +31,13 @@
 		655C09642B2C9A71007FF8CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		655C09672B2C9A71007FF8CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		655C09692B2C9A71007FF8CA /* QuasarTerm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuasarTerm.entitlements; sourceTree = "<group>"; };
+		655C09702B2C9AB9007FF8CA /* LocalProcessTerminalViewPrepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProcessTerminalViewPrepresentable.swift; sourceTree = "<group>"; };
+		655C097C2B2CA264007FF8CA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		655C09822B2CA288007FF8CA /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		655C09882B2CA4CD007FF8CA /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
+		655C098A2B2CAEE9007FF8CA /* ColorConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConvert.swift; sourceTree = "<group>"; };
+		655C098C2B2CB443007FF8CA /* ColorFromHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFromHex.swift; sourceTree = "<group>"; };
+		655C098E2B2CB97D007FF8CA /* AdvancedToolbarWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedToolbarWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655C09802B2CA274007FF8CA /* Defaults in Frameworks */,
+				655C09792B2CA025007FF8CA /* SwiftTerm in Frameworks */,
+				655C097B2B2CA025007FF8CA /* SwiftTermFuzz in Frameworks */,
+				655C09862B2CA473007FF8CA /* FontPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +74,8 @@
 		655C095F2B2C9A70007FF8CA /* QuasarTerm */ = {
 			isa = PBXGroup;
 			children = (
+				655C09812B2CA27E007FF8CA /* Utils */,
+				655C096F2B2C9AA8007FF8CA /* Views */,
 				655C09602B2C9A70007FF8CA /* QuasarTermApp.swift */,
 				655C09622B2C9A70007FF8CA /* ContentView.swift */,
 				655C09642B2C9A71007FF8CA /* Assets.xcassets */,
@@ -67,6 +91,35 @@
 				655C09672B2C9A71007FF8CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		655C096F2B2C9AA8007FF8CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				655C09872B2CA4BE007FF8CA /* Settings */,
+				655C09702B2C9AB9007FF8CA /* LocalProcessTerminalViewPrepresentable.swift */,
+				655C098E2B2CB97D007FF8CA /* AdvancedToolbarWindow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		655C09812B2CA27E007FF8CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				655C09822B2CA288007FF8CA /* Defaults.swift */,
+				655C098A2B2CAEE9007FF8CA /* ColorConvert.swift */,
+				655C098C2B2CB443007FF8CA /* ColorFromHex.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		655C09872B2CA4BE007FF8CA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				655C097C2B2CA264007FF8CA /* SettingsView.swift */,
+				655C09882B2CA4CD007FF8CA /* AppearanceView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +138,12 @@
 			dependencies = (
 			);
 			name = QuasarTerm;
+			packageProductDependencies = (
+				655C09782B2CA025007FF8CA /* SwiftTerm */,
+				655C097A2B2CA025007FF8CA /* SwiftTermFuzz */,
+				655C097F2B2CA274007FF8CA /* Defaults */,
+				655C09852B2CA473007FF8CA /* FontPicker */,
+			);
 			productName = QuasarTerm;
 			productReference = 655C095D2B2C9A70007FF8CA /* QuasarTerm.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +172,11 @@
 				Base,
 			);
 			mainGroup = 655C09542B2C9A70007FF8CA;
+			packageReferences = (
+				655C09772B2CA024007FF8CA /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+				655C097E2B2CA274007FF8CA /* XCRemoteSwiftPackageReference "Defaults" */,
+				655C09842B2CA473007FF8CA /* XCRemoteSwiftPackageReference "FontPicker" */,
+			);
 			productRefGroup = 655C095E2B2C9A70007FF8CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +204,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				655C09632B2C9A70007FF8CA /* ContentView.swift in Sources */,
+				655C097D2B2CA264007FF8CA /* SettingsView.swift in Sources */,
+				655C098B2B2CAEE9007FF8CA /* ColorConvert.swift in Sources */,
+				655C09832B2CA288007FF8CA /* Defaults.swift in Sources */,
+				655C09712B2C9AB9007FF8CA /* LocalProcessTerminalViewPrepresentable.swift in Sources */,
+				655C098D2B2CB443007FF8CA /* ColorFromHex.swift in Sources */,
+				655C09892B2CA4CD007FF8CA /* AppearanceView.swift in Sources */,
 				655C09612B2C9A70007FF8CA /* QuasarTermApp.swift in Sources */,
+				655C098F2B2CB97D007FF8CA /* AdvancedToolbarWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +347,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuasarTerm/Preview Content\"";
 				DEVELOPMENT_TEAM = TCHY3UX6JP;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Quasar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,9 +376,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuasarTerm/Preview Content\"";
 				DEVELOPMENT_TEAM = TCHY3UX6JP;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Quasar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,6 +416,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		655C09772B2CA024007FF8CA /* XCRemoteSwiftPackageReference "SwiftTerm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Frostplexx/SwiftTerm.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		655C097E2B2CA274007FF8CA /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		655C09842B2CA473007FF8CA /* XCRemoteSwiftPackageReference "FontPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tyagishi/FontPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		655C09782B2CA025007FF8CA /* SwiftTerm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655C09772B2CA024007FF8CA /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTerm;
+		};
+		655C097A2B2CA025007FF8CA /* SwiftTermFuzz */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655C09772B2CA024007FF8CA /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTermFuzz;
+		};
+		655C097F2B2CA274007FF8CA /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655C097E2B2CA274007FF8CA /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		655C09852B2CA473007FF8CA /* FontPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655C09842B2CA473007FF8CA /* XCRemoteSwiftPackageReference "FontPicker" */;
+			productName = FontPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 655C09552B2C9A70007FF8CA /* Project object */;
 }
