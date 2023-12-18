@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct QuasarTermApp: App {
     var body: some Scene {
-        @Environment(\.openWindow) var openWindow
         WindowGroup {
             ContentView()
         }

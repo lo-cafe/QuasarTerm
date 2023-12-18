@@ -1,0 +1,30 @@
+name: QuasarTerm
+options:
+  bundleIdPrefix: com.frostplexx
+packages:
+  SwiftTerm:
+    url: https://github.com/Frostplexx/SwiftTerm
+    from: 1.0.0
+  Defaults:
+    url: https://github.com/sindresorhus/Defaults
+    from: 7.3.1
+  FontPicker:
+    url: https://github.com/tyagishi/FontPicker
+    from: 1.2.0
+targets:
+  QuasarTerm:
+    info:
+      path: QuasarTerm/Info.plist
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources: [QuasarTerm]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.frostplexx.QuasarTerm
+    dependencies:
+      - package: SwiftTerm
+      - package: Defaults
+      - package: FontPicker
+config:
+  deploymentTarget:
+    macOS: "14.0"

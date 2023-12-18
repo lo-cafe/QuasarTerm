@@ -3,16 +3,16 @@
     {
       "identity" : "defaults",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sindresorhus/Defaults.git",
+      "location" : "https://github.com/sindresorhus/Defaults",
       "state" : {
-        "branch" : "main",
-        "revision" : "d8a9f5105607c85b544558e7f5b51d6c360ba88b"
+        "revision" : "3efef5a28ebdbbe922d4a2049493733ed14475a6",
+        "version" : "7.3.1"
       }
     },
     {
       "identity" : "fontpicker",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/tyagishi/FontPicker.git",
+      "location" : "https://github.com/tyagishi/FontPicker",
       "state" : {
         "revision" : "b11a5c4334c7b130d4e7463d637e7ba2a725e90b",
         "version" : "1.2.0"
@@ -21,10 +21,10 @@
     {
       "identity" : "swiftterm",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Frostplexx/SwiftTerm.git",
+      "location" : "https://github.com/Frostplexx/SwiftTerm",
       "state" : {
-        "branch" : "main",
-        "revision" : "ab6b74a8856e18d760201d8fb2392aacefaec646"
+        "revision" : "ab6b74a8856e18d760201d8fb2392aacefaec646",
+        "version" : "1.0.0"
       }
     }
   ],

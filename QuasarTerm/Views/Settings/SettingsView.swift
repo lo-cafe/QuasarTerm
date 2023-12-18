@@ -5,22 +5,26 @@
 //  Created by daniel on 15/12/23.
 //
 
-import SwiftUI
 import Defaults
 import FontPicker
+import SwiftUI
 struct SettingsView: View {
     var body: some View {
-        
-        NavigationView{
-            List{
+        NavigationView {
+            List {
                 NavigationLink(destination: {
                     AppearanceView()
                 }, label: {
                     Label("Appearance", systemImage: "paintbrush")
                 })
-          
+                NavigationLink(destination:
+                    TestView(),
+                    label: {
+                        Label("Test", systemImage: "pencil")
+                    })
             }.listStyle(.sidebar)
         }
+
         .toolbar(removing: .sidebarToggle)
     }
 }

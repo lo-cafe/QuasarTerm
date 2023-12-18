@@ -4,11 +4,10 @@
 //
 //  Created by daniel on 15/12/23.
 //
-import SwiftUI
 import Defaults
+import SwiftUI
 
 struct ContentView: View {
-    
     @Default(.backroundTint) var backgroundTint
     var body: some View {
         VStack {
@@ -21,18 +20,11 @@ struct ContentView: View {
         .background(VisualEffectView().ignoresSafeArea())
         .preferredColorScheme(.dark)
         .navigationTitle("Quasar")
-        
-        
     }
-    
 }
 
-
-#Preview {
-    ContentView()
-}
 struct VisualEffectView: NSViewRepresentable {
-    func makeNSView(context: Context) -> NSVisualEffectView {
+    func makeNSView(context _: Context) -> NSVisualEffectView {
         let view = NSVisualEffectView()
 
         view.blendingMode = .behindWindow
@@ -42,7 +34,7 @@ struct VisualEffectView: NSViewRepresentable {
         return view
     }
 
-    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {
+    func updateNSView(_: NSVisualEffectView, context _: Context) {
         //
     }
 }
