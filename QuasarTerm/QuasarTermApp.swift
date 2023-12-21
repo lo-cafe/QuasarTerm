@@ -30,19 +30,17 @@ struct QuasarTermApp: App {
                 })
                 .keyboardShortcut("t", modifiers: [.command])
                 
-                Button(action: {
-                    if let currentWindow = NSApp.keyWindow {
-                       let newWindow = AdvancedToolbarWindow(withTitle: "Settings", {
-                            SettingsView()
-                        })
-                        currentWindow.addChildWindow(newWindow, ordered: .above)
-                        
-                    }
-                }, label: {
-                    Text("Settings")
-                })
-                 .keyboardShortcut(",", modifiers: [.command])
             })
         }
+        
+#if os(macOS)
+    Settings{
+        SettingsView()
     }
+#endif
+    }
+    
+
+    
 }
+

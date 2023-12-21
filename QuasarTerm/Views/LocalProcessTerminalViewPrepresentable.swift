@@ -16,7 +16,10 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
     typealias NSViewType = LocalProcessTerminalView
     @Default(.terminalFont) var terminalFont
     @Default(.caretColor) var caretColor
-    init() {}
+    @Binding var ansiColors: [String]
+    init(ansiColors: Binding<[String]>) {
+        _ansiColors = ansiColors
+    }
 
     func makeNSView(context _: Context) -> LocalProcessTerminalView {
         // MARK: - Terminal Setup
@@ -39,8 +42,9 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
         terminalView.caretColor = NSColor(caretColor)
 
         // Hardcoded Terminal Colors for the moment
-        terminalView.installColors(loadansiColors())
+        terminalView.installColors(loadansiColors(ansiColors: ansiColors))
         terminalView.caretTextColor = .black
+
         return terminalView
     }
 

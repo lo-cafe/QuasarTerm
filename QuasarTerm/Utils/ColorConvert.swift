@@ -9,8 +9,7 @@ import Defaults
 import Foundation
 import SwiftTerm
 
-func loadansiColors() -> [SwiftTerm.Color] {
-    let ansiColors = Defaults[.ansiColors]
+func loadansiColors(ansiColors: [String]) -> [SwiftTerm.Color] {
     var colorsArr: [SwiftTerm.Color] = []
     for value in ansiColors {
         let hex = String(value.dropFirst())

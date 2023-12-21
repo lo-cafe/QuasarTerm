@@ -8,10 +8,11 @@ import Defaults
 import SwiftUI
 
 struct ContentView: View {
+    @Default(.ansiColors) var ansiColors
     @Default(.backroundTint) var backgroundTint
     var body: some View {
         VStack {
-            LocalProcessTerminalViewRepresentable()
+            LocalProcessTerminalViewRepresentable(ansiColors: $ansiColors)
                 .background(.clear)
                 .padding(.top, 5)
         }

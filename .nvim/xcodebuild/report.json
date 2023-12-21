@@ -1,1 +1,1 @@
-{"testsCount": 0, "diagnostics": [], "failedTestsCount": 0, "tests": [], "buildErrors": [], "warnings": []}
+{"diagnostics": [], "testsCount": 0, "failedTestsCount": 0, "tests": [], "buildErrors": [], "warnings": [{"filename": "ContentView", "lineNumber": 20, "message": ["'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.", "        .onChange(of: ansiColors) { colors in", "         ^"], "columnNumber": 10, "filepath": "/Users/daniel/Documents/Development/QuasarTerm/QuasarTerm/ContentView.swift"}]}
