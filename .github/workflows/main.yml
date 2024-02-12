@@ -9,7 +9,9 @@ on:
 jobs:
   Build:
     runs-on: macos-14
-
+    permissions:
+            contents: write
+            pull-requests: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
