@@ -31,7 +31,6 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
 
         // MARK: - Terminal Appearance setup
 
-        terminalView.startProcess(executable: shell,args: Defaults[.shellArguments], execName: shellIdiom)
         terminalView.nativeBackgroundColor = NSColor.clear
         terminalView.nativeForegroundColor = NSColor(Color(hex: 0xCAD3F5))
         terminalView.layer?.backgroundColor = CGColor.clear
@@ -39,11 +38,17 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
         // MARK: - Setting User Options
 
         terminalView.font = terminalFont
-        terminalView.caretColor = NSColor(caretColor)
-
+        terminalView.caretTextColor = .red
+        terminalView.terminal.cursorColor = caretColor
+        terminalView.terminal.setCursorStyle(Defaults[.cursorStyle])
+        
         // Hardcoded Terminal Colors for the moment
         terminalView.installColors(loadansiColors(ansiColors: ansiColors))
         terminalView.caretTextColor = .black
+        
+        
+        // MARK: - Run Terminal Process
+        terminalView.startProcess(executable: shell,args: Defaults[.shellArguments], execName: shellIdiom)
 
         return terminalView
     }
@@ -68,7 +73,8 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
         return shellProgram != "" ? shellProgram : String(cString: pwd.pw_shell)
     }
 
-    func updateNSView(_: LocalProcessTerminalView, context _: Context) {
-        // Update any properties if needed
+    func updateNSView(_ terminalView: LocalProcessTerminalView, context _: Context) {
+        terminalView.terminal.cursorColor = caretColor
+        terminalView.terminal.setCursorStyle(Defaults[.cursorStyle])
     }
 }

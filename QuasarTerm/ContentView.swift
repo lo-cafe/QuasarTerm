@@ -10,11 +10,15 @@ import SwiftUI
 struct ContentView: View {
     @Default(.ansiColors) var ansiColors
     @Default(.backroundTint) var backgroundTint
+    @Default(.padding) var terminalPadding: TerminalPadding
     var body: some View {
         VStack {
             LocalProcessTerminalViewRepresentable(ansiColors: $ansiColors)
                 .background(.clear)
-                .padding(.top, 5)
+                .padding(.top, terminalPadding.top)
+                .padding(.bottom, terminalPadding.bottom)
+                .padding(.leading, terminalPadding.leading)
+                .padding(.trailing, terminalPadding.trailing)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(backgroundTint)
