@@ -14,6 +14,6 @@ jobs:
     - name: Checkout Source
       uses: actions/checkout@v3
     - name: Build (macOS)
-      uses: SwiftActions/SwiftBuild@v0.2
+      uses: SwiftActions/SwiftBuild@0.2
     - name: Run tests
-      uses: SwiftActions/SwiftTest@v0.2
+      uses: SwiftActions/SwiftTest@0.2
