@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,10 +12,11 @@
 		4FFEAAB972DB5320D41D7A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C97814CA3AC350D8BD75A0 /* Assets.xcassets */; };
 		5876C30D3F682FF8A7ACED40 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = D05F04EA74FC91FDF78E080A /* Defaults */; };
 		590EF88CBD384516817A39D5 /* ColorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CB7AB29AE65E9D2ED5EBB /* ColorFromHex.swift */; };
-		6854DF79DC12D683281A6583 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C893E449B867F4F4E66FB /* TestView.swift */; };
+		65BCFAFA2B777E8D00A6E9E1 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCFAF92B777E8D00A6E9E1 /* GeneralSettingsView.swift */; };
 		6E877ED0EBDF48579A67FF3A /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 03E921729863CDD07CF4547D /* SwiftTerm */; };
 		6E995CE139A1B9BE93933960 /* importExportColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64BACB42D035D6446D009C /* importExportColors.swift */; };
 		7B822D3938A7E828E13E2151 /* LocalProcessTerminalViewPrepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6769DAC52601E491A9F65 /* LocalProcessTerminalViewPrepresentable.swift */; };
+		87BFA9D65331921B27DE6649 /* SettingsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6321C4319090F5639E24CB /* SettingsWindow.swift */; };
 		8FFF2F1D8B65649E6BC56D75 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB5E56EAF19E87C0DFC4EA /* Defaults.swift */; };
 		9F634787C75A7DC54EEBA23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C516D84E90AF4341D8FA8393 /* Preview Assets.xcassets */; };
 		C5F4A6FE9CB92DF3ECE59668 /* FontPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 184AD8EF40852F8899285F46 /* FontPicker */; };
@@ -26,13 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		032C893E449B867F4F4E66FB /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		042B46E584DE1653ADCA7F60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09620722AF01F563E2869656 /* QuasarTermApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuasarTermApp.swift; sourceTree = "<group>"; };
 		3F5CB7AB29AE65E9D2ED5EBB /* ColorFromHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFromHex.swift; sourceTree = "<group>"; };
 		4D64BACB42D035D6446D009C /* importExportColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importExportColors.swift; sourceTree = "<group>"; };
 		54A45AF8E5978344D6E6E851 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 		58E95BB610F6FF5DF3BA1AFC /* QuasarTerm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuasarTerm.entitlements; sourceTree = "<group>"; };
+		65BCFAF92B777E8D00A6E9E1 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		76E17105C9A6B75E53FE890D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		80EB5E56EAF19E87C0DFC4EA /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		84C5EE023D78A7056263C01D /* ColorConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConvert.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		C670E73D4C097DB9BD5FCAB0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C89A07B76611A5E2242DF900 /* AdvancedToolbarWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedToolbarWindow.swift; sourceTree = "<group>"; };
 		D2C7F79A41A820EBEECE429D /* QuasarTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuasarTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6321C4319090F5639E24CB /* SettingsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				76E17105C9A6B75E53FE890D /* Info.plist */,
 				58E95BB610F6FF5DF3BA1AFC /* QuasarTerm.entitlements */,
 				09620722AF01F563E2869656 /* QuasarTermApp.swift */,
+				FE6321C4319090F5639E24CB /* SettingsWindow.swift */,
 				3809138320905F44F755ED01 /* Preview Content */,
 				8EA6E723D451E10C3E3F5F01 /* Utils */,
 				9CE572CCC0F14FE379333389 /* Views */,
@@ -94,7 +97,7 @@
 			children = (
 				54A45AF8E5978344D6E6E851 /* AppearanceView.swift */,
 				C670E73D4C097DB9BD5FCAB0 /* SettingsView.swift */,
-				032C893E449B867F4F4E66FB /* TestView.swift */,
+				65BCFAF92B777E8D00A6E9E1 /* GeneralSettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -160,9 +163,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
+				LastUpgradeCheck = 1520;
 			};
 			buildConfigurationList = BC92361393E1735C2DAAD74C /* Build configuration list for PBXProject "QuasarTerm" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -206,13 +207,14 @@
 				DC32A773C4516E5117225A44 /* AdvancedToolbarWindow.swift in Sources */,
 				0CB6CE250B0EB70CCC2A33B2 /* AppearanceView.swift in Sources */,
 				D60070D889534C9253FB7CC1 /* ColorConvert.swift in Sources */,
+				65BCFAFA2B777E8D00A6E9E1 /* GeneralSettingsView.swift in Sources */,
 				590EF88CBD384516817A39D5 /* ColorFromHex.swift in Sources */,
 				FF316251F29ACBF9DFB4CE8F /* ContentView.swift in Sources */,
 				8FFF2F1D8B65649E6BC56D75 /* Defaults.swift in Sources */,
 				7B822D3938A7E828E13E2151 /* LocalProcessTerminalViewPrepresentable.swift in Sources */,
 				E6B57EC104C2EA1E7AF1334F /* QuasarTermApp.swift in Sources */,
 				1392EC4D4773F4A0CB447D4E /* SettingsView.swift in Sources */,
-				6854DF79DC12D683281A6583 /* TestView.swift in Sources */,
+				87BFA9D65331921B27DE6649 /* SettingsWindow.swift in Sources */,
 				6E995CE139A1B9BE93933960 /* importExportColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +227,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = QuasarTerm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -270,9 +273,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -325,9 +330,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -358,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = QuasarTerm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -413,8 +421,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Frostplexx/SwiftTerm";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -4,7 +4,7 @@ options:
 packages:
   SwiftTerm:
     url: https://github.com/Frostplexx/SwiftTerm
-    from: 1.0.0
+    branch: main
   Defaults:
     url: https://github.com/sindresorhus/Defaults
     from: 7.3.1

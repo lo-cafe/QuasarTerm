@@ -8,31 +8,32 @@
 import Defaults
 import FontPicker
 import SwiftUI
+
 struct AppearanceView: View {
     @Default(.terminalFont) var terminalFont
     @Default(.backroundTint) var backgroundTint
     @Default(.caretColor) var caretColor
     var body: some View {
-        List {
+        Form {
             Section("Font") {
-                VStack {
+                HStack{
                     fontPreview
-                    HStack {
-                        Text("Current Font:")
-                            .fontWeight(.medium)
-                        Text(terminalFont.displayName ?? "no font")
-                        Spacer()
-                    }
-                    HStack {
-                        Text("Font Size:")
-                            .fontWeight(.medium)
-                        Text("\(terminalFont.pointSize, specifier: "%.0f")")
-                        Spacer()
-                    }
-                    HStack {
-                        FontPicker("", selection: $terminalFont)
-                        Spacer()
-                    }
+                }
+                
+                HStack {
+                    Text("Current Font:")
+                        .fontWeight(.medium)
+                    Text(terminalFont.displayName ?? "no font")
+                    Spacer()
+                    FontPicker("", selection: $terminalFont)
+                }
+                
+                
+                HStack {
+                    Text("Font Size:")
+                        .fontWeight(.medium)
+                    Text("\(terminalFont.pointSize, specifier: "%.0f")")
+                    Spacer()
                 }
             }
             Section("Colors") {
@@ -75,17 +76,17 @@ struct AppearanceView: View {
                     }
                 }
             }
-        }
-        .listStyle(.sidebar)
+        }.formStyle(.grouped)
     }
 
     var fontPreview: some View {
         Text("The quick brown fox jumps over the lazy dog")
             .font(Font(terminalFont))
+            .frame(maxWidth: .infinity)
             .padding()
             .background {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(Color(white: 0.9))
+                    .fill(backgroundTint)
             }
     }
 }

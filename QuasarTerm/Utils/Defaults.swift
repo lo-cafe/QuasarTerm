@@ -14,6 +14,8 @@ extension Defaults.Keys {
     static let terminalFont = Key<NSFont>("terminalFont", default: .monospacedSystemFont(ofSize: 12, weight: .regular))
     static let backroundTint = Key<Color>("backgroundTint", default: .clear)
     static let caretColor = Key<Color>("caretColor", default: .gray)
+    static let shellProgram = Key<String>("shellProgram", default: "/bin/zsh")
+    static let shellArguments = Key<[String]>("shellProgram", default: [])
     static let ansiColors = Key<[String]>("ansiColors", default: [
         "#494D64", // black
         "#ED8796", // red

@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Frostplexx/SwiftTerm",
       "state" : {
-        "revision" : "ab6b74a8856e18d760201d8fb2392aacefaec646",
-        "version" : "1.0.0"
+        "branch" : "main",
+        "revision" : "5aa14a3dc18f740e767d2a6a798fdcfdd372ec5e"
       }
     }
   ],

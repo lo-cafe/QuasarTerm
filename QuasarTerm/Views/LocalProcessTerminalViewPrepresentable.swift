@@ -31,7 +31,7 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
 
         // MARK: - Terminal Appearance setup
 
-        terminalView.startProcess(executable: shell, execName: shellIdiom)
+        terminalView.startProcess(executable: shell,args: Defaults[.shellArguments], execName: shellIdiom)
         terminalView.nativeBackgroundColor = NSColor.clear
         terminalView.nativeForegroundColor = NSColor(Color(hex: 0xCAD3F5))
         terminalView.layer?.backgroundColor = CGColor.clear
@@ -50,6 +50,7 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
 
     // Returns the shell associated with the current account
     func getShell() -> String {
+        @Default(.shellProgram) var shellProgram
         let bufsize = sysconf(_SC_GETPW_R_SIZE_MAX)
         guard bufsize != -1 else {
             return "/bin/bash"
@@ -64,7 +65,7 @@ struct LocalProcessTerminalViewRepresentable: NSViewRepresentable {
         if getpwuid_r(getuid(), &pwd, buffer, bufsize, &result) != 0 {
             return "/bin/bash"
         }
-        return String(cString: pwd.pw_shell)
+        return shellProgram != "" ? shellProgram : String(cString: pwd.pw_shell)
     }
 
     func updateNSView(_: LocalProcessTerminalView, context _: Context) {

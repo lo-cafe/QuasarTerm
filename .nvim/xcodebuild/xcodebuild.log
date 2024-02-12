@@ -2,25 +2,22 @@ Resolving Package Graph
 Resolved source packages
 FontPicker - https://github.com/tyagishi/FontPicker @ 1.2.0
 Defaults - https://github.com/sindresorhus/Defaults @ 7.3.1
-SwiftTerm - https://github.com/Frostplexx/SwiftTerm @ 1.0.0
 [!]  --- xcodebuild: Using the first of multiple matching destinations:
 { platform:macOS, arch:arm64, id:00008103-000C198E26A3001E }
 { platform:macOS, arch:x86_64, id:00008103-000C198E26A3001E }
-[!]  /Users/daniel/Documents/Development/QuasarTerm/QuasarTerm/ContentView.swift:20:10: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
-        .onChange(of: ansiColors) { colors in
-         ^
-Signing QuasarTerm.app (in target 'QuasarTerm' from project 'QuasarTerm')
-Build Succeeded
+[x] /Users/daniel/Documents/Development/QuasarTerm/QuasarTerm/Views/Settings/AppearanceView.swift:17:14: trailing closure passed to parameter of type 'FormStyleConfiguration' that does not accept a closure
+        Form {
+             ^
 
 -----------------------------
 -- xcodebuild.nvim summary --
 -----------------------------
 
-Warnings:
-   /Users/daniel/Documents/Development/QuasarTerm/QuasarTerm/ContentView.swift:20:10
-    'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
-            .onChange(of: ansiColors) { colors in
-             ^
+Errors:
+  ✖ /Users/daniel/Documents/Development/QuasarTerm/QuasarTerm/Views/Settings/AppearanceView.swift:17:14
+    trailing closure passed to parameter of type 'FormStyleConfiguration' that does not accept a closure
+            Form {
+                 ^
 
-  ✔ Build Succeeded
+  Build Failed
 

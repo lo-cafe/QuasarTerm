@@ -6,13 +6,28 @@
 //
 
 import SwiftUI
+import Defaults
 
-struct GeneralSettings: View {
+struct GeneralSettingsView: View {
+    @Default(.shellProgram) var shellProgram
+    @Default(.shellArguments) var shellArguments
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section {
+                TextField("Program", text: $shellProgram)
+                
+                TextField("Arguments", text: Binding(get: {
+                    return shellArguments.joined(separator: ",")
+                }, set: { value in
+                    shellArguments = value.split(separator: ",").map {$0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                }))
+            }  header: {
+                Text("Shell")
+            } footer: {
+                Text("Use commas to separate the arguments: arg1,arg2,arg3,...")
+            }
+        }
+        .formStyle(.grouped)
     }
 }
 
-#Preview {
-    GeneralSettings()
-}
