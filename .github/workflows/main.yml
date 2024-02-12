@@ -1,15 +1,19 @@
-name: Build Swift Project
+name: Swift
+
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  macos-build:
+    runs-on: macos-12
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Build Swift Project
-        uses: SwiftActions/SwiftBuild@v0.2
-        with:
-          target: "SwiftBuild"
-          verbose: true
+    - name: Checkout Source
+      uses: actions/checkout@v3
+    - name: Build (macOS)
+      uses: SwiftActions/SwiftBuild@v0.2
+    - name: Run tests
+      uses: SwiftActions/SwiftTest@v0.2
