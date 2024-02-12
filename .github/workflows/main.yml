@@ -45,4 +45,4 @@ jobs:
         with:
             tag_name: ${{ steps.date.outputs.date }}
             files: |
-                QuasarTerm.app/
+                *
