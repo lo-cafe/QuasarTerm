@@ -23,7 +23,7 @@ jobs:
         run: |
           xcodebuild \
             -scheme "QuasarTerm" \
-            -archivePath $RUNNER_TEMP/QuasarTerm.xcarchive \
+            -archivePath ./QuasarTerm.xcarchive \
             -destination platform=macOS \
             -allowProvisioningUpdates \
             clean archive
