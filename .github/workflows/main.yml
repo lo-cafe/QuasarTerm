@@ -40,9 +40,15 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
 
+
+      - name: Zip Folder
+        run: |
+          rm -rf QuasarTerm.zip
+          zip -r QuasarTerm.zip ./QuasarTerm.app
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
             tag_name: ${{ steps.date.outputs.date }}
             files: |
-                *
+                *.zip
