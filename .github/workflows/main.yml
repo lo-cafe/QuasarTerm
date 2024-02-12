@@ -33,9 +33,14 @@ jobs:
         run: |
           EXPORT_OPTS_PATH=./ExportOptions.plist
           xcodebuild -exportArchive -archivePath $RUNNER_TEMP/QuasarTerm.xcarchive -exportOptionsPlist $EXPORT_OPTS_PATH -exportPath $RUNNER_TEMP/build
-     
-      - name: Upload to Github Releases
-        uses: actions/upload-artifact@v3
+             
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: QuasarTerm
-          path: ${{ runner.temp }}/build/QuasarTerm.app
+            tag_name: ${{ steps.date.outputs.date }}
+            files: |
+                ${{ runner.temp }}/build/QuasarTerm.app
