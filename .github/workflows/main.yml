@@ -1,0 +1,15 @@
+name: Build Swift Project
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Swift Project
+        uses: SwiftActions/SwiftBuild@v0.2
+        with:
+          target: "SwiftBuild"
+          verbose: true
